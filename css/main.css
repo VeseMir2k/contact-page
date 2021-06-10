@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+input,
+textarea,
+button {
   font-family: "Raleway", sans-serif;
   font-size: 10px;
 }
@@ -35,6 +38,7 @@ main {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 main section {
@@ -43,6 +47,7 @@ main section {
 
 .form-wrap {
   padding: 20px;
+  max-width: 600px;
 }
 
 .form-wrap h2 {
@@ -60,7 +65,7 @@ main section {
   cursor: text;
 }
 
-.form-wrap form .input-wrap > label {
+.form-wrap form .input-wrap label {
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -84,7 +89,7 @@ main section {
   left: 0;
 }
 
-.form-wrap form .input-wrap > label > span {
+.form-wrap form .input-wrap label span {
   position: absolute;
   top: 25px;
   left: 5px;
@@ -95,23 +100,85 @@ main section {
   transition: 0.3s;
 }
 
-.form-wrap form .input-wrap > label:focus-within > span {
+.form-wrap form .input-wrap label:focus-within span {
   top: 0;
   color: black;
 }
 
-.form-wrap form .input-wrap > label > input,
-.form-wrap form .input-wrap > label > textarea {
+.form-wrap form .input-wrap label input,
+.form-wrap form .input-wrap > label textarea {
   outline: none;
   flex-basis: 100%;
   height: 36px;
   padding: 5px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 0;
   border: none;
-  border-bottom: 2px solid rgb(202, 202, 202);
+  border-bottom: 2px solid #cacaca;
 }
 
-.form-wrap form .input-wrap > label > textarea {
+.form-wrap form .input-wrap label textarea {
   resize: none;
+  height: auto;
+  margin-top: 14px;
+  font-size: 1.4rem;
+}
+
+.form-wrap form .input-content {
+  height: auto;
+}
+
+.form-wrap form button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4e4e4e;
+  text-transform: uppercase;
+  border: 0;
+  border-top: 2px solid #cacaca;
+  border-bottom: 2px solid #cacaca;
+  transition: 0.3s;
+}
+
+.form-wrap form button:hover {
+  color: black;
+}
+
+.form-wrap form > span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-wrap form > span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.form-wrap form > span:hover::after {
+  left: 0;
+}
+
+.form-wrap form > span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.form-wrap form > span:hover::before {
+  right: 0;
 }

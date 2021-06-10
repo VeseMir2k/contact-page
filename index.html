@@ -16,30 +16,34 @@
       <h1>Kontakt</h1>
     </header>
     <main>
-      <section class="form">
+      <section class="form-wrap">
         <h2>Napisz do nas</h2>
         <form>
-          <div class="form-wrap">
-            <label for="name">Imie i nazwisko</label>
-            <input name="name" type="text" id="name" />
+          <div class="input-wrap input-name">
+            <label>
+              <span>Imie i nazwisko</span>
+              <input name="name" type="text" />
+            </label>
           </div>
-          <div class="form-wrap">
-            <label for="mail">E-mail</label>
-            <input name="mail" type="email" id="mail" />
+          <div class="input-wrap input-mail">
+            <label>
+              <span>E-mail</span>
+              <input name="mail" type="email" />
+            </label>
           </div>
-          <div class="form-wrap">
-            <label for="topic">Temat</label>
-            <input name="topic" type="text" id="topic" />
+          <div class="input-wrap input-topic">
+            <label>
+              <span>Temat</span>
+              <input name="topic" type="text" />
+            </label>
           </div>
-          <div class="form-wrap">
-            <label for="content">Napisz do nas...</label>
-            <textarea
-              name="content"
-              id="content"
-              cols="30"
-              rows="10"
-            ></textarea>
+          <div class="input-wrap input-content">
+            <label>
+              <span>Napisz do nas...</span>
+              <textarea name="content"></textarea>
+            </label>
           </div>
+          <button>Wyślij wiadomość</button>
         </form>
       </section>
       <section></section>
